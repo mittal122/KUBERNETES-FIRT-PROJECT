@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: db
+  labels:
+    app: demo-voting-app
+    component: postgres
+spec:
+  selector:
+    app: demo-voting-app
+    component: postgres
+  ports:
+    - port: 5432
+      targetPort: 5432
